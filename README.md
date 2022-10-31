@@ -53,7 +53,7 @@ Such as "dev", "dev admin", "back office", "admin"
 
 
 **Example Login URL**
-
+```
 http://localhost:8080/realms/app/protocol/openid-connect/auth?client_id=account-console&\
     redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Frealms%2Fapp%2Faccount%2F%23%2F&\
     state=eb0042a24dd143ca969fb915142e49ce&\
@@ -63,17 +63,21 @@ http://localhost:8080/realms/app/protocol/openid-connect/auth?client_id=account-
     nonce=e18aa2b8-1857-4df9-86fa-034928117810&\
     code_challenge=vz9b5W5hjQ0LIpucJxQNiMGK7ss5-lluC8-KGvi8h9I&\
     code_challenge_method=S256
-
+```
 
 **RSA public key**
 
 Need to be in following format.
+
+```
 -----BEGIN RSA PUBLIC KEY-----
 <..public key string...>
 -----END RSA PUBLIC KEY-----
+```
 
 Example:
 
+```
 -----BEGIN RSA PUBLIC KEY-----
 MIICWwIBACKBgQCUn8GgYNw49UCmHZl0cmbHQucMJEPZQoCzisBG3D80jlhea6di
 dPrPHNhb9jNNOY2W4Ip6AfggbpFeemUhPhD88yz8Y9ntNzH0ztES6JV5lSyhOKLn
@@ -89,7 +93,7 @@ Lpc4sw2Dllu350M/ppwXEqQVa+0B1cZMuxsTk3f8MlE9Mv+K6Y746rlUrlbGSdvt
 gM1Iv2MsVfP3sTk+oQJABSHcGx+31fcKJoWgxGGGGGGGGGGGGGGGGGGGGGGGGGGG
 vzqiaNCgAr4udqFRVGjqaFLb8rdbALFzja2fuSH4eQ==
 -----END RSA PUBLIC KEY-----
-
+```
 
 ### 5. Prepare .env file
 
