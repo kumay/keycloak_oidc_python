@@ -98,6 +98,8 @@ vzqiaNCgAr4udqFRVGjqaFLb8rdbALFzja2fuSH4eQ==
 ### 5. Prepare .env file
 
 ```
+$ vi .env
+
 # Applicatuon settings
 APP_BASE_URL = "http://localhost:8000"
 APP_CLIENT_ID = "my_client"
