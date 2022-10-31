@@ -49,7 +49,7 @@ Such as "dev", "dev admin", "back office", "admin"
 
 ### 4. Add user for login test
 
-**Do not forget to set credencial (i.e password)** 
+Do not forget to set credencial (i.e password)
 
 
 **Example Login URL**
