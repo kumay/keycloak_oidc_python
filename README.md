@@ -1,12 +1,12 @@
 # Preparing Keycloak for OpenID connect
 
-1. run kaycloak using docker
+### 1. run kaycloak using docker
 
 ```
 $ docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:19.0.3 my-keycloak
 ```
 
-2. create realm
+### 2. create realm
 
 | Setting | Parameter | value |
 |---------|-----------|-------|
@@ -21,7 +21,7 @@ Add some Roles.
 Such as "dev", "dev admin", "back office", "admin"
 
 
-3. create client
+### 3. create client
 
 | Setting | Tab | Parameter | value |
 |---------|-----|-----------|-------|
@@ -47,7 +47,7 @@ Such as "dev", "dev admin", "back office", "admin"
 | Clients | Advance | Authentication flow overrides: Direct Grant Flow | direct grant |
 
 
-4. Add user for login test
+### 4. Add user for login test
 
 **Do not forget to set credencial (i.e password)** 
 
@@ -91,7 +91,7 @@ vzqiaNCgAr4udqFRVGjqaFLb8rdbALFzja2fuSH4eQ==
 -----END RSA PUBLIC KEY-----
 
 
-5. Prepare .env file
+### 5. Prepare .env file
 
 ```
 # Applicatuon settings
@@ -109,7 +109,7 @@ RSA_PUBLIC_KEY_BODY = "MIIBIjANBgkqhkiG......................Baa="
 ```
 
 
-6. Start test web server 
+### 6. Start test web server 
 
 ```
 $ python main.py
