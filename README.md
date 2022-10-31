@@ -98,6 +98,7 @@ vzqiaNCgAr4udqFRVGjqaFLb8rdbALFzja2fuSH4eQ==
 ### 5. Prepare .env file
 
 ```
+$ cp example.env .env
 $ vi .env
 
 # Applicatuon settings
