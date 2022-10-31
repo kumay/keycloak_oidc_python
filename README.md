@@ -1,5 +1,12 @@
 # Preparing Keycloak for OpenID connect
 
+
+A simple example code for testing and setting up openId connect login with Keycloak.
+
+Keycloak(ver 19.0.2) runs on docker using internal database (H2).
+The login test app is implemented on Fastapi (python 3.9.7).
+
+
 ### 1. run kaycloak using docker
 
 ```
