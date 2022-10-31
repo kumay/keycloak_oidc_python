@@ -1,4 +1,4 @@
-# Preparing Keycloak for OpenID connect
+# OpenID connect with Keycloak and Fastapi (python)
 
 
 A simple example code for testing and setting up openId connect login with Keycloak.
