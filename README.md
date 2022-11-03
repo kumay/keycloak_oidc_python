@@ -176,7 +176,10 @@ Need to include **client_id** in redirect url
 Example code
 
 ```
-get_param = parse.urlencode({"client_id": APP_CLIENT_ID})
+id_token = request.cookies.get("ID_TOKEN")
+get_param = parse.urlencode({"client_id": APP_CLIENT_ID,
+                             "post_logout_redirect_uri": APP_LOGOUT_REDIRECT_URL,
+                             "id_token_hint": id_token})
 url = LOGOUT_URL + "?{}".format(get_param)
 ```
 
