@@ -128,3 +128,58 @@ RSA_PUBLIC_KEY_BODY = "MIIBIjANBgkqhkiG......................Baa="
 ```
 $ python main.py
 ```
+
+
+
+### 7. Logout behavior
+
+Keycloak oidc logout url : http://{KEYCLOAK_BASE_URL_LOCALHOST}/realms/{KEYCLOAK_REALM}/protocol/openid-connect/logout
+
+#### senario 1 : Logout from keycloak but do nothing on application. 
+
+This seeting will logout by browser redirect.
+
+**Keycloak client setting**
+
+```
+Front channel logout : ON
+Front-channel logout URL : http://<application url>/auth/logout/callback
+```
+
+**Client application**
+Need to include **client_id** in redirect url
+
+Example code
+
+```
+get_param = parse.urlencode({"client_id": APP_CLIENT_ID})
+url = LOGOUT_URL + "?{}".format(get_param)
+```
+
+#### senario 2 : Logout from keycloak and do clean up on client application by calling its URI endpoint (can be RestAPI endpoint). 
+
+This seeting will logout by browser redirect.
+After logout confirm keycloak call URI endpoint of applictaion.
+In that endpoint application can do cleaning up such as remove stored session from cache (in Redis or some other session manegement middleware)
+This method cannot remove cookie from browser set by the client application.
+
+**Keycloak client setting**
+
+```
+Front channel logout : ON
+Front-channel logout URL : http://<application url>/auth/logout/callback
+```
+
+**Client application**
+Need to include **client_id** in redirect url
+
+Example code
+
+```
+get_param = parse.urlencode({"client_id": APP_CLIENT_ID})
+url = LOGOUT_URL + "?{}".format(get_param)
+```
+
+
+
+
