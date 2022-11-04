@@ -10,7 +10,7 @@ The login test app is implemented in Fastapi (python 3.9.7).
 ### 1. run kaycloak using docker
 
 ```
-$ docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:19.0.3 my-keycloak
+$ docker run -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin --name my-keycloakquay.io/keycloak/keycloak:19.0.3 start-dev
 ```
 
 ### 2. create realm
